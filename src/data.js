@@ -3,10 +3,12 @@ import { errorText } from "./render";
 export async function getWeatherData(search) {
   const APIKEY = "d7c1713ad5724af9a37173303241905";
   try {
+    errorText.set("Searching...");
     const response = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${search}`,
       { mode: "cors" }
     );
+    errorText.clear();
     const weatherDataRaw = await response.json();
     const weatherData = new Weather(weatherDataRaw);
     return weatherData;
