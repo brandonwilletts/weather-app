@@ -74,7 +74,7 @@ button:hover {
 }
 
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -109,13 +109,13 @@ h1 {
 }
 
 .info {
-  display: grid;
+  display: none;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 4px;
   width: fit-content;
   height: fit-content;
-  min-width: 320px;
+  min-width: 576px;
   padding: 32px;
   border-radius: 16px;
   background-color: var(--info-bg);
