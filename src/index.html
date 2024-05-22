@@ -6,13 +6,36 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <form action="#" method="get">
-        <label for="search">Search</label>
-        <input type="search" name="search" id="search" />
+    <form action="#" method="get">
+      <div class="search-container">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search weather by location"
+        />
         <button type="submit">Search</button>
-        <span class="error"></span>
-      </form>
+      </div>
+      <span class="error"></span>
+    </form>
+    <div class="container">
+      <h1>Vancouver</h1>
+      <div class="temp">13<span class="degree">°C</span></div>
+      <div class="condition">Cloudy</div>
+    </div>
+    <div class="info">
+      <div>Location:</div>
+      <div>Vancouver, British Columbia, Canada</div>
+      <div>Local Time:</div>
+      <div>6:03 PM</div>
+      <div>Temperature (°C):</div>
+      <div>13°C</div>
+      <div>Temperature (°F):</div>
+      <div>55°F</div>
+      <div>Humidity:</div>
+      <div>55%</div>
+      <div>Last Updated:</div>
+      <div>May 20th, 2024 6:30 PM</div>
     </div>
   </body>
 </html>

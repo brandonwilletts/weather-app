@@ -11,7 +11,7 @@ form.addEventListener("submit", (event) => {
     form.reset();
     errorText.textContent = "";
   } else {
-    errorText.textContent = "Please enter search";
+    errorText.textContent = "Please enter valid search";
   }
 });
 
@@ -21,8 +21,9 @@ async function getWeatherData(search) {
     `https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${search}`
   );
   const weatherDataRaw = await response.json();
-  const weatherData = new Weather(weatherDataRaw);
-  return weatherData;
+  //const weatherData = new Weather(weatherDataRaw);
+  //return weatherData;
+  return console.log(weatherDataRaw);
 }
 
 class Weather {
@@ -31,12 +32,12 @@ class Weather {
       city: weatherData.location.name,
       region: weatherData.location.region,
       country: weatherData.location.country,
+      time: weatherData.location.localtime,
     }),
       (this.weather = {
         condition: weatherData.current.condition.text,
-        iconURL: weatherData.current.condition.icon,
-        temperatureF: weatherData.current.temp_f,
-        temperatureC: weatherData.current.temp_c,
+        tempF: weatherData.current.temp_f,
+        tempC: weatherData.current.temp_c,
         humidity: weatherData.current.humidity,
         lastUpdated: weatherData.current.last_updated,
       });

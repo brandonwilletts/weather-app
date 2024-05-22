@@ -1,7 +1,124 @@
 :root {
   --error: red;
+  --skyblue: skyblue;
+  --skyblue-shadow: rgb(76, 118, 134);
+  --white: white;
+  --white-hover: rgb(243, 243, 243);
+  --info-bg: rgba(37, 37, 63, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: var(--skyblue);
+  color: var(--white);
+  height: 100vh;
+  gap: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  background-color: var(--info-bg);
+  box-shadow: 2px 2px 5px var(--skyblue-shadow);
+  border-radius: 16px;
+  padding: 32px;
+  gap: 4px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+input,
+input:active {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 12pt;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  outline: none;
+  min-width: 320px;
+}
+
+input::placeholder {
+  color: var(--white);
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12pt;
+  background-color: var(--white);
+  color: var(--skyblue-shadow);
+  border: none;
+}
+
+button:hover {
+  background-color: var(--white-hover);
 }
 
 .error {
-  color: var(--error);
+  color: var(--white);
+  font-size: 10pt;
+  margin-left: 4px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  width: fit-content;
+  min-width: 240px;
+  border-radius: 16px;
+  background-color: var(--info-bg);
+  gap: 16px;
+  box-shadow: 2px 2px 5px var(--skyblue-shadow);
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 24pt;
+  font-weight: 500;
+}
+
+.degree {
+  font-size: 18pt;
+  margin-left: 4px;
+  vertical-align: top;
+}
+
+.temp {
+  font-size: 60pt;
+}
+
+.condition {
+  font-size: 14pt;
+}
+
+.info {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  width: fit-content;
+  height: fit-content;
+  min-width: 320px;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--info-bg);
+  font-size: 12pt;
+  box-shadow: 2px 2px 5px var(--skyblue-shadow);
 }
